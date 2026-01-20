@@ -3,7 +3,7 @@
 set -e
 
 BUILD_DIR=build
-TEST_DIR=tests/lexer
+TEST_DIR=tests/lexer/test_cases
 EXPECTED_DIR=tests/lexer/expected
 LEXER_BIN=$BUILD_DIR/lexer_test
 
