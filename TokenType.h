@@ -1,8 +1,15 @@
 #pragma once
 
+/**
+ * @file TokenType.h
+ * @brief Defines all token types recognized by the lexer.
+ *
+ * This enum represents the smallest meaningful units (tokens)
+ * of the restricted C language supported by the compiler.
+ */
 enum class TokenType {
     
-    // Keywords
+    /** @name Keywords */
     INT,
     FLOAT,
     DOUBLE,
@@ -14,12 +21,12 @@ enum class TokenType {
     RETURN,
     PRINTF,
 
-    // Identifiers & literals
+    /** @name Identifiers and literals */
     IDENTIFIER,
     NUMBER,
     STRING,
 
-    // Operators
+    /** @name Operators */
     PLUS,
     MINUS,
     STAR,
@@ -34,7 +41,7 @@ enum class TokenType {
     LTE,           // <=
     GTE,           // >=
 
-    // Delimiters
+    /** @name Delimiters */
     LPAREN,        // (
     RPAREN,        // )
     LBRACE,        // {
@@ -42,6 +49,7 @@ enum class TokenType {
     SEMICOLON,     // ;
     COMMA,
 
-    END_OF_FILE,
-    UNKNOWN
+    /** @name Special tokens */
+    END_OF_FILE,   // Indicates the end of the input
+    UNKNOWN        // Represents an unrecognized token
 };
