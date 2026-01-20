@@ -1,9 +1,10 @@
 #pragma once
 #include <string>
 #include "TokenType.h"
+using namespace std;
 
 struct Token {
     TokenType type;
-    std::string lexeme;
+    string lexeme;
     int line;
 };

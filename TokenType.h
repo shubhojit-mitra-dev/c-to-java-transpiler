@@ -1,6 +1,7 @@
 #pragma once
 
 enum class TokenType {
+    
     // Keywords
     INT,
     FLOAT,
