@@ -328,6 +328,8 @@ vector<Token> Lexer::tokenize() {
             default:
                 tokens.push_back({TokenType::UNKNOWN, string(1, c), line});
         }
+
+        skipWhitespace();
     }
 
     tokens.push_back({TokenType::END_OF_FILE, "", line});
