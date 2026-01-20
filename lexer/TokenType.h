@@ -41,6 +41,10 @@ enum class TokenType {
     LTE,           // <=
     GTE,           // >=
 
+    AND,           // &&
+    OR,            // ||
+    NOT,           // !
+
     /** @name Delimiters */
     LPAREN,        // (
     RPAREN,        // )

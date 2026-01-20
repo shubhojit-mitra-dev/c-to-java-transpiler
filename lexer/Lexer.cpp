@@ -283,7 +283,7 @@ vector<Token> Lexer::tokenize() {
                 if (match('=')) {
                     tokens.push_back({TokenType::NEQ, "!=", line});
                 } else {
-                    tokens.push_back({TokenType::UNKNOWN, "!", line});
+                    tokens.push_back({TokenType::NOT, "!", line});
                 }
                 break;
 
@@ -297,6 +297,14 @@ vector<Token> Lexer::tokenize() {
                 tokens.push_back(match('=') ?
                     Token{TokenType::GTE, ">=", line} :
                     Token{TokenType::GT, ">", line});
+                break;
+            
+            case '&':
+                if (match('&')) {
+                    tokens.push_back({TokenType::AND, "&&", line});
+                } else {
+                    tokens.push_back({TokenType::UNKNOWN, "&", line});
+                }
                 break;
 
             case '(':
